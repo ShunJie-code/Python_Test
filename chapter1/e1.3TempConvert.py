@@ -1,7 +1,7 @@
-# -*- coding:utf-8 -*-
 """
 作者：xsj
 日期：2023年 08月 13日
+2.2.11 函数
 """
 
 
@@ -20,11 +20,4 @@ temp_str = input("请输入带有符号的温度值：")
 temp_convert(temp_str)
 
 
-def test1():
-    for i in range(5):
-        print("Hello", i)
-    for i in range(2, 5):
-        print("world", i)
 
-
-test1()

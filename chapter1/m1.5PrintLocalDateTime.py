@@ -8,6 +8,5 @@ from datetime import datetime
 now = datetime.now()
 
 print(now)
-
-now.strftime("%x")
-now.strftime("%X")
+print(now.strftime("%x"))
+print(now.strftime("%X"))

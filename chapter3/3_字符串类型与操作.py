@@ -22,5 +22,11 @@ def test2():
     print("0123456789"[::-1])
 
 
+def test3():
+    test_string = "1 + 1 = 2 " + chr(10004)
+    print(test_string)
+
+
 test1()
 test2()
+test3()

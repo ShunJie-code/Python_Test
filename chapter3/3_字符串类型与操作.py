@@ -27,6 +27,16 @@ def test3():
     print(test_string)
 
 
-test1()
-test2()
-test3()
+# 打印 12 星座序列
+def test4():
+    for i in range(12):
+        print(chr(9800 + i), end="")  # end=“” 表示输出不换行
+
+# 字符串类型的格式化-槽
+
+
+# test1()
+# test2()
+# test3()
+test4()
+

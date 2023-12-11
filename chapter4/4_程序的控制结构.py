@@ -7,6 +7,8 @@ def test1():
     # 直接用except 太宽泛，可以指定异常类型 # except:
     except ValueError:
         print("输入的不是整数")
+    except:
+        print("其他错误")
     else:
         print("输入是整数")
     finally:

@@ -55,8 +55,45 @@ def test3():
     # 相当于增加一个子列
     ll[1] = [1, 3]
     print(ll)
+    del ll[::2]
+    print(ll)
+    ll *= 2
+    print(ll)
+
+
+def test4():
+    ls = ['cat', 'dog', 'tiger', 1024]
+    print(ls)
+    ls.append(1234)
+    print(ls)
+    ls.insert(3, 'human')
+    print(ls)
+    ls.reverse()
+    print(ls)
+    print(ls.index(1024))
+    print(len(ls))
+    ls.clear()
+    print(ls)
+
+
+def test5():
+    lt = []
+    lt += [1, 2, 3, 4, 5]
+    lt[2] = 6
+    lt.insert(2, 7)
+    del lt[1]
+    del lt[1:4]
+    print(0 in lt)
+    print(lt)
+    # 数据保护
+    tp1 = tuple(lt)
+    tp2 = tuple(lt)
+    tp = tp1 + tp2
+    print(tp)
 
 
 # test1()
 # test2()
-test3()
+# test3()
+# test4()
+test5()

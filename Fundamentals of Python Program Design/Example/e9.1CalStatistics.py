@@ -35,6 +35,8 @@ def median(numbers):
 
 
 def main():
+    # 幂运算的一种方法
+    print(7 ** 3)
     numbers = get_num()
     m = mean(numbers)
     print("平均值：{:.2} 标准差：{:.2} 中位数：{}".format(m, dev(numbers, m),

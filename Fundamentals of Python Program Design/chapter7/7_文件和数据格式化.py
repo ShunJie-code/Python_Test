@@ -19,6 +19,7 @@ def test2():
 
 
 def test3():
+    # 解析中文需要带编码格式参数
     fo = open('7.1.txt', 'w+', encoding='utf-8')
     # 读所有行
     ls = ['唐诗', '宋词', '元曲']

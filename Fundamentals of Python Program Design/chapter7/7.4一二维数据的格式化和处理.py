@@ -35,13 +35,16 @@ def test4():
     fr = open("price2016.csv", 'r', encoding="utf-8")
     fw = open("price2016out.csv", 'w')
     ls = []
+    # 二维数据读
     for line in fr:
         line = line.replace('\n', '')
         ls.append(line.split(','))
+    # 二维数据处理
     for i in range(len(ls)):
         for j in range(len(ls[i])):
             if ls[i][j].replace(".", "").isnumeric():
                 ls[i][j] = "{:.2}%".format(float(ls[i][j]) / 100)
+    # 二维数据写
     for row in ls:
         print(row)
         fw.write(",".join(row) + "\n")

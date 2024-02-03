@@ -31,5 +31,17 @@ def test3():
     fo.close()
 
 
-test2()
-test3()
+def test4():
+    ls = ['中国', '美国', '英国']
+    # 文件的join写入与split读出
+    fp = open('7.1.txt', 'w', encoding='utf-8')
+    fp.write('$'.join(ls))
+    fp.close()
+    fp = open('7.1.txt', 'r', encoding='utf-8')
+    ls2 = fp.read().split('$')
+    print(ls2)
+
+
+# test2()
+# test3()
+test4()

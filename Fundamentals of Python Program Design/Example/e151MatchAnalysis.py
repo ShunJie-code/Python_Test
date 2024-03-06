@@ -63,4 +63,8 @@ def main():
     print_summary(wins_a, wins_b)
 
 
-main()
+if __name__ == '__main__':
+    """
+    需要用这个判断语句隔离一下，否则其他文件导入该文件，main()会立马执行
+    """
+    main()

@@ -37,13 +37,21 @@ def test3():
     os.path
     :return:
     """
-    filepath = op.abspath("第三方库安装.py")
+    # filepath = op.abspath("第三方库安装.py")
+    filepath1 = op.abspath("test.json")
+
     # 归一化路径表示形式，将os的其他路径格式统一
     filepath2 = op.normpath("D://codeHUb//ad")
-    filepath3 = op.relpath("第三方库安装.py")
-    # filepath = op.abspath("第三方库安装.py")
+    # 相对路径
+    filepath3 = op.relpath(filepath1)
 
-    print(filepath)
+    # file_dir = os.path.dirname(filepath)
+    # file_basename = os.path.basename(filepath)
+    # print("file_dir = {}".format(file_dir))
+    # print("file_dir = {}".format(file_basename))
+    # print(filepath)
+    print(filepath1)
+
     print(filepath2)
     print(filepath3)
 

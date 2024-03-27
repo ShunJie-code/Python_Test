@@ -14,7 +14,8 @@ def test1():
     进程管理
     :return:
     """
-    os.system("C:\\Windows\\System32\\calc.exe")
+    ret = os.system("C:\\Windows\\System32\\calc.exe")
+    print(ret)  # 0表示正常打开
 
 
 def test2():
@@ -31,6 +32,7 @@ def test2():
     cpu_count = os.cpu_count()
     print("Current user is: {}\nCPU count is: {}"
           .format(user, cpu_count))
+    print(os.urandom(10))  # 10个字节长度的随机字符串
 
 
 def test3():
@@ -90,7 +92,9 @@ def test5():
     c = op.getctime("D:\\CodeHub\\Python\\Python_Test\\FundamentalsOfPythonProgramDesign\\chapter7\\test.json")
     time3 = time.ctime(c)
     print("access time = {}\nmodify time = {}\ncreate time = {}".format(time1, time2, time3))
+    sz = op.getsize("D:\\CodeHub\\Python\\Python_Test\\FundamentalsOfPythonProgramDesign\\chapter7\\test.json")
+    print(sz)  # 42 字节
 
 
-# test2()
-test5()
+test2()
+# test5()

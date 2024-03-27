@@ -16,10 +16,20 @@ class Student:
     def age(self):
         return self.__age
 
-    def _func1(self):  # 受保护的方法
+    @age.setter
+    def age(self, value):
+        if value <= 0 or value > 100:
+            print('年龄错误，默认设置为18')
+            self.__age = 18
+        else:
+            self.__age = value
+
+    @staticmethod
+    def _func1():  # 受保护的方法
         print('子类及本身可以访问')
 
-    def __func2(self):  # 私有方法
+    @staticmethod
+    def __func2():  # 私有方法
         print('只有定义的类可以访问')
 
     def show(self):
@@ -30,6 +40,10 @@ class Student:
 
 
 stu = Student('xsj', 20, '男')
-print(stu._name)  # 可以输出，但是提示：不建议这么使用
-print(stu._Student__age)
+# print(stu._name)  # 可以输出，但是提示：不建议这么使用
+# print(stu._Student__age)
 print(stu.gender, stu.age)
+stu.age = 0
+print(stu.gender, stu.age)
+stu.show()
+# stu._func1()  # 可以输出，但是提示：不建议这么使用被保护的方法

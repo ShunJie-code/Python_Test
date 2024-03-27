@@ -19,10 +19,8 @@ def test1():
 
 
 def test2():
-    d = {}
-    d['a'] = 1
-    d['b'] = 2
-    print(d)
+    d = {'a': 1, 'b': 2}
+    print("d['b'] = {}".format(d['b']))
     d['b'] = 7
     for k in d:
         print(d[k])
@@ -32,5 +30,5 @@ def test2():
     print(len(d))
 
 
-# test1()
-test2()
+test1()
+# test2()
